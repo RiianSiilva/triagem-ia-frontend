@@ -1,0 +1,631 @@
+.painel-page {
+  min-height: 100vh;
+  background: #090d16;
+  color: #f1f5f9;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.painel-navbar {
+  background: #0f172a;
+  border-bottom: 1px solid #1e293b;
+  padding: 0.8rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.painel-navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.navbar-badge-cross {
+  background: #2563eb;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 900;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+.painel-navbar-brand h2 {
+  font-size: 1.05rem;
+  margin: 0;
+  color: white;
+  font-weight: 700;
+}
+
+.painel-navbar-brand small {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.painel-navbar-acoes {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.usuario-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #1e293b;
+  border: 1px solid #334155;
+  padding: 0.35rem 0.8rem;
+  border-radius: 30px;
+}
+
+.usuario-avatar {
+  background: #2563eb;
+  color: white;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.usuario-textos strong {
+  font-size: 0.82rem;
+  display: block;
+  line-height: 1.1;
+  color: white;
+}
+
+.usuario-textos small {
+  font-size: 0.68rem;
+  color: #93c5fd;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.btn-nav {
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.btn-nav-secundario {
+  background: #1e293b;
+  color: #cbd5e1;
+  border-color: #334155;
+}
+
+.btn-nav-secundario:hover {
+  background: #334155;
+  color: white;
+}
+
+.btn-nav-sair {
+  background: transparent;
+  color: #ef4444;
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.btn-nav-sair:hover {
+  background: rgba(239, 68, 68, 0.15);
+}
+
+/* Conteúdo */
+.painel-conteudo {
+  padding: 1.8rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Grade de Contadores */
+.grade-contadores {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+.card-contador {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contador-valor {
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.contador-titulo {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.card-contador.aguardando .contador-valor { color: #fbbf24; }
+.card-contador.em-atendimento .contador-valor { color: #60a5fa; }
+.card-contador.alta .contador-valor { color: #34d399; }
+.card-contador.total .contador-valor { color: #f8fafc; }
+
+/* Barra de Filtros */
+.barra-filtros {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.filtro-bloco {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.filtro-titulo {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.filtro-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.btn-tag-filtro {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #94a3b8;
+  border-radius: 20px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.btn-tag-filtro:hover {
+  background: #334155;
+  color: white;
+}
+
+.btn-tag-filtro.ativo {
+  color: white;
+  border-color: #60a5fa;
+  background: #1e3a8a;
+}
+
+.btn-tag-filtro.cor-vermelho.ativo { background: #dc2626; border-color: #dc2626; color: white; }
+.btn-tag-filtro.cor-laranja.ativo  { background: #ea580c; border-color: #ea580c; color: white; }
+.btn-tag-filtro.cor-amarelo.ativo  { background: #ca8a04; border-color: #ca8a04; color: white; }
+.btn-tag-filtro.cor-verde.ativo    { background: #16a34a; border-color: #16a34a; color: white; }
+.btn-tag-filtro.cor-azul.ativo     { background: #2563eb; border-color: #2563eb; color: white; }
+
+.chip-numero {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.1rem 0.4rem;
+  border-radius: 10px;
+  font-size: 0.7rem;
+}
+
+/* Grade de Triagens */
+.grade-triagens {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+  gap: 1.2rem;
+}
+
+.cartao-paciente-triagem {
+  background: #0f172a;
+  border-radius: 14px;
+  border: 1px solid #1e293b;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.cartao-finalizado {
+  opacity: 0.5;
+}
+
+.cartao-header-manchester {
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-weight: 700;
+}
+
+.cor-vermelho .cartao-header-manchester { background: #dc2626; }
+.cor-laranja .cartao-header-manchester  { background: #ea580c; }
+.cor-amarelo .cartao-header-manchester  { background: #ca8a04; }
+.cor-verde .cartao-header-manchester    { background: #16a34a; }
+.cor-azul .cartao-header-manchester     { background: #2563eb; }
+
+.manchester-cor-nome {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.cor-circulo-badge {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+}
+
+.prioridade-texto {
+  font-weight: 400;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.cartao-tempo-alvo {
+  background: rgba(0, 0, 0, 0.25);
+  padding: 0.25rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.cartao-corpo {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.paciente-cabecalho-linha {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.paciente-cabecalho-linha h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: white;
+  font-weight: 700;
+}
+
+.paciente-idade {
+  color: #94a3b8;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.dado-queixa {
+  font-size: 0.88rem;
+  color: #e2e8f0;
+  line-height: 1.4;
+  margin: 0.2rem 0;
+}
+
+.dado-linha {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.dado-linha strong, .dado-queixa strong {
+  color: white;
+}
+
+.dado-conduta {
+  font-size: 0.82rem;
+  background: #090d16;
+  border-left: 3px solid #3b82f6;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  color: #93c5fd;
+  margin: 0.4rem 0;
+  line-height: 1.4;
+}
+
+/* Sinais Vitais Chips */
+.grade-sinais-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.5rem 0;
+}
+
+.sinal-chip {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.alerta-auditoria-medica {
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: #d8b4fe;
+}
+
+.alerta-auditoria-medica small {
+  display: block;
+  color: #c084fc;
+  margin-top: 2px;
+}
+
+/* Rodapé do Card */
+.cartao-rodape-acoes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #1e293b;
+  padding-top: 0.8rem;
+  margin-top: auto;
+}
+
+.badge-status-atual {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.status-aguardando     { background: rgba(251, 191, 36, 0.15); color: #fbbf24; }
+.status-em-atendimento { background: rgba(96, 165, 250, 0.15); color: #60a5fa; }
+.status-revisado       { background: rgba(168, 85, 247, 0.15); color: #c084fc; }
+.status-alta           { background: rgba(52, 211, 153, 0.15); color: #34d399; }
+
+.botoes-acao-medica {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.btn-acao-quadrado {
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-revisar {
+  background: #1e293b;
+  color: #f1f5f9;
+  border: 1px solid #334155;
+}
+
+.btn-revisar:hover {
+  background: #334155;
+  color: white;
+}
+
+.btn-atender {
+  background: #2563eb;
+  color: white;
+}
+
+.btn-atender:hover {
+  background: #1d4ed8;
+}
+
+.btn-alta {
+  background: #16a34a;
+  color: white;
+}
+
+.btn-alta:hover {
+  background: #15803d;
+}
+
+.texto-alta-ok {
+  color: #34d399;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.estado-vazio {
+  text-align: center;
+  padding: 4rem;
+  color: #64748b;
+  font-size: 1rem;
+}
+
+/* Modal de Revisão */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+}
+
+.modal-janela {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 540px;
+  padding: 1.8rem;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+.modal-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.modal-top h2 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: white;
+  font-weight: 700;
+}
+
+.btn-modal-fechar {
+  background: transparent;
+  border: none;
+  font-size: 1.3rem;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.modal-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal-info-paciente {
+  background: #1e293b;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-size: 0.88rem;
+}
+
+.tag-cor-atual {
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 800;
+  font-size: 0.75rem;
+  color: white;
+  margin-left: 0.4rem;
+}
+
+.tag-cor-atual.cor-vermelho { background: #dc2626; }
+.tag-cor-atual.cor-laranja  { background: #ea580c; }
+.tag-cor-atual.cor-amarelo  { background: #ca8a04; }
+.tag-cor-atual.cor-verde    { background: #16a34a; }
+.tag-cor-atual.cor-azul     { background: #2563eb; }
+
+.label-revisao {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.grade-escolha-cores {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-cor-escolha {
+  flex: 1;
+  padding: 0.6rem 0.2rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 0.75rem;
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s;
+}
+
+.btn-cor-escolha.cor-vermelho { background: #dc2626; }
+.btn-cor-escolha.cor-laranja  { background: #ea580c; }
+.btn-cor-escolha.cor-amarelo  { background: #ca8a04; }
+.btn-cor-escolha.cor-verde    { background: #16a34a; }
+.btn-cor-escolha.cor-azul     { background: #2563eb; }
+
+.btn-cor-escolha.selecionada {
+  border-color: white;
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.modal-formulario textarea, .modal-formulario input {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background: #090d16;
+  border: 1px solid #334155;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.modal-rodape-botoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.btn-modal-cancelar {
+  background: #1e293b;
+  color: #cbd5e1;
+  border: none;
+  padding: 0.65rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-modal-confirmar {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.65rem 1.4rem;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-modal-confirmar:hover {
+  background: #1d4ed8;
+}
+
+@media (max-width: 900px) {
+  .grade-contadores { grid-template-columns: 1fr 1fr; }
+  .grade-triagens { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,264 @@
+.relatorio-page {
+  min-height: 100vh;
+  background: #090d16;
+  color: #f8fafc;
+}
+
+.relatorio-navbar {
+  background: #0f172a;
+  border-bottom: 1px solid #1e293b;
+  padding: 0.9rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.relatorio-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-badge {
+  background: #2563eb;
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.relatorio-brand h2 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: white;
+}
+
+.btn-voltar {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.relatorio-conteudo {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.relatorio-header-bloco h1 {
+  font-size: 1.8rem;
+  margin: 0 0 0.4rem;
+}
+
+.relatorio-header-bloco p {
+  color: #94a3b8;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.grade-metricas-resumo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+.card-metrica {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.metrica-numero {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #38bdf8;
+  line-height: 1;
+}
+
+.metrica-rotulo {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Barras de Distribuição */
+.secao-distribuicao-cores {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  padding: 1.8rem 2rem;
+}
+
+.secao-distribuicao-cores h3 {
+  margin: 0 0 1.4rem;
+  font-size: 1.15rem;
+}
+
+.barras-distribuicao {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.barra-rotulo-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.88rem;
+  margin-bottom: 0.4rem;
+}
+
+.barra-rotulo-info strong {
+  width: 110px;
+}
+
+.barra-rotulo-info span {
+  color: #94a3b8;
+}
+
+.barra-qtd {
+  font-weight: 700;
+  color: white !important;
+}
+
+.barra-fundo {
+  background: #090d16;
+  border-radius: 10px;
+  height: 12px;
+  overflow: hidden;
+  border: 1px solid #1e293b;
+}
+
+.barra-preenchimento {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.6s ease;
+}
+
+/* Tabela de Auditoria */
+.secao-tabela-auditoria {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  padding: 1.8rem 2rem;
+}
+
+.tabela-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.btn-imprimir-relatorio {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.1rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.tabela-container {
+  overflow-x: auto;
+}
+
+.tabela-relatorio {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.88rem;
+}
+
+.tabela-relatorio th {
+  background: #131d31;
+  padding: 0.9rem 1rem;
+  color: #94a3b8;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #1e293b;
+}
+
+.tabela-relatorio td {
+  padding: 1rem;
+  border-bottom: 1px solid #1e293b;
+  color: #e2e8f0;
+}
+
+.cpf-sub {
+  display: block;
+  color: #64748b;
+  font-size: 0.75rem;
+}
+
+.sinais-sub {
+  color: #94a3b8;
+  font-size: 0.8rem;
+}
+
+.badge-tabela-cor {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  font-weight: 800;
+  font-size: 0.75rem;
+  color: white;
+}
+
+.badge-tabela-status {
+  background: #1e293b;
+  color: #94a3b8;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.auditoria-td span {
+  display: block;
+  font-weight: 600;
+  color: #d8b4fe;
+  font-size: 0.82rem;
+}
+
+.auditoria-td small {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.auditoria-conforme {
+  color: #34d399;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+@media print {
+  body { background: white !important; color: black !important; }
+  .relatorio-navbar, .btn-imprimir-relatorio, .btn-voltar { display: none !important; }
+  .secao-distribuicao-cores, .secao-tabela-auditoria, .card-metrica {
+    background: white !important;
+    color: black !important;
+    border: 1px solid #ccc !important;
+  }
+}

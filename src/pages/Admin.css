@@ -1,0 +1,83 @@
+.admin-page {
+  min-height: 100vh;
+  background: #090d16;
+  color: white;
+}
+
+.admin-nav {
+  background: #0f172a;
+  border-bottom: 1px solid #1e293b;
+  padding: 1rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-nav h2 {
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+.admin-nav-botoes {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.btn-admin-link {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.admin-conteudo {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.admin-header-card {
+  margin-bottom: 1.8rem;
+}
+
+.admin-header-card h1 {
+  font-size: 1.6rem;
+  margin: 0 0 0.4rem;
+}
+
+.admin-header-card p {
+  color: #94a3b8;
+  margin: 0;
+}
+
+.admin-tabela-box {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.admin-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.admin-tabela th {
+  background: #131d31;
+  padding: 1rem;
+  color: #94a3b8;
+  font-weight: 700;
+  border-bottom: 1px solid #1e293b;
+}
+
+.admin-tabela td {
+  padding: 1rem;
+  border-bottom: 1px solid #1e293b;
+  color: #e2e8f0;
+}

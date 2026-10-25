@@ -1,0 +1,559 @@
+.totem-page {
+  min-height: 100vh;
+  background: #090d16;
+  color: #f1f5f9;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header / Topbar */
+.totem-topbar {
+  background: #0f172a;
+  border-bottom: 1px solid #1e293b;
+  padding: 0.9rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.totem-topbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-cross {
+  background: #2563eb;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 900;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+.totem-topbar-brand h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+}
+
+.totem-topbar-brand small {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  display: block;
+}
+
+.btn-sair-totem {
+  background: transparent;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+  padding: 0.45rem 1.1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-sair-totem:hover {
+  background: #1e293b;
+  border-color: #64748b;
+  color: white;
+}
+
+/* Indicador de Passos (Stepper) */
+.totem-topbar-steps {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.totem-step-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  position: relative;
+}
+
+.totem-step {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid #334155;
+  background: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: #64748b;
+  transition: all 0.3s ease;
+}
+
+.totem-step.ativo {
+  border-color: #3b82f6;
+  background: #2563eb;
+  color: white;
+  box-shadow: 0 0 16px rgba(59, 130, 246, 0.5);
+  transform: scale(1.05);
+}
+
+.totem-step.completo {
+  border-color: #10b981;
+  background: #10b981;
+  color: white;
+}
+
+.totem-step-nome {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #64748b;
+  transition: color 0.3s;
+}
+
+.totem-step.ativo ~ .totem-step-nome,
+.totem-step-wrapper:hover .totem-step-nome {
+  color: #e2e8f0;
+}
+
+/* Container do Cartão */
+.totem-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2.5rem 1rem;
+}
+
+.totem-card {
+  background: #0f172a;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 680px;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6);
+  border: 1px solid #1e293b;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.totem-card-amplo {
+  max-width: 860px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.totem-card-header {
+  background: #131d31;
+  padding: 1.8rem 2.5rem;
+  border-bottom: 1px solid #1e293b;
+}
+
+.badge-passo {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(37, 99, 235, 0.2);
+  color: #60a5fa;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.totem-card-header h1 {
+  font-size: 1.45rem;
+  margin: 0;
+  color: white;
+  letter-spacing: -0.02em;
+}
+
+.totem-card-header p {
+  margin: 0.4rem 0 0;
+  font-size: 0.88rem;
+  color: #94a3b8;
+  line-height: 1.4;
+}
+
+.totem-form {
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+/* Campos de Formulário */
+.campo label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  margin-bottom: 0.45rem;
+}
+
+.campo input, .campo select, .campo textarea {
+  width: 100%;
+  padding: 0.8rem 1.1rem;
+  border-radius: 10px;
+  background: #090d16;
+  border: 1.5px solid #1e293b;
+  color: white;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  transition: all 0.2s;
+}
+
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+  background: #0b1120;
+}
+
+.campo-linha {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+/* Destaque de Pressão */
+.campo-medicao-destaque {
+  background: #131d31;
+  border: 1px solid #1e293b;
+  padding: 1.2rem;
+  border-radius: 12px;
+}
+
+.medicao-titulo-com-dica {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.dica-texto {
+  font-size: 0.8rem;
+  color: #38bdf8;
+  font-weight: 500;
+}
+
+.pressao-inputs {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.pressao-inputs input {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.barra-separadora {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #475569;
+}
+
+.unidade-tag {
+  color: #94a3b8;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+/* Inputs com unidades acopladas */
+.input-unidade-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-unidade-box input {
+  padding-right: 3rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.input-unidade-box span {
+  position: absolute;
+  right: 1rem;
+  color: #64748b;
+  font-weight: 700;
+  font-size: 0.82rem;
+  pointer-events: none;
+}
+
+.opcional-tag {
+  color: #64748b;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+/* Card de IMC Inteligente */
+.card-imc-calculado {
+  background: rgba(37, 99, 235, 0.12);
+  border: 1.5px solid rgba(37, 99, 235, 0.35);
+  border-radius: 12px;
+  padding: 1rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #bfdbfe;
+}
+
+.imc-icone { font-size: 1.8rem; }
+.card-imc-calculado strong { font-size: 1.05rem; display: block; color: white; }
+.imc-status { font-size: 0.85rem; color: #93c5fd; margin-top: 0.2rem; display: block; }
+
+/* Grid de Sintomas Populares */
+.sintomas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 0.6rem;
+}
+
+.btn-sintoma-card {
+  background: #090d16;
+  border: 1px solid #1e293b;
+  color: #94a3b8;
+  padding: 0.75rem 0.9rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+  line-height: 1.3;
+}
+
+.btn-sintoma-card:hover {
+  background: #1e293b;
+  color: white;
+  border-color: #334155;
+  transform: translateY(-1px);
+}
+
+.btn-sintoma-card.selecionado {
+  background: #1e3a8a;
+  border-color: #3b82f6;
+  color: white;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+}
+
+/* Checkbox e Gestante */
+.campo-checkbox label, .checkbox-rotulo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: #e2e8f0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.campo-checkbox input, .checkbox-rotulo input {
+  width: 18px;
+  height: 18px;
+  accent-color: #2563eb;
+  cursor: pointer;
+}
+
+.box-gestante {
+  background: rgba(244, 63, 94, 0.08);
+  border: 1px solid rgba(244, 63, 94, 0.25);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+}
+
+.banner-erro {
+  background: rgba(220, 38, 38, 0.15);
+  border: 1px solid #dc2626;
+  color: #fca5a5;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.88rem;
+}
+
+/* Botões do Rodapé */
+.botoes-linha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.botoes-linha-direita {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.btn-grande {
+  padding: 0.9rem 2rem !important;
+  font-size: 0.98rem !important;
+}
+
+.btn-primario {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+  transition: all 0.2s;
+}
+
+.btn-primario:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+}
+
+.btn-primario:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn-secundario {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+  padding: 0.85rem 1.6rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-secundario:hover {
+  background: #334155;
+  color: white;
+}
+
+.btn-finalizar {
+  background: #059669 !important;
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.4) !important;
+}
+
+.btn-finalizar:hover:not(:disabled) {
+  background: #047857 !important;
+}
+
+/* RESULTADO FINAL MANCHESTER */
+.resultado-header {
+  padding: 2.5rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.resultado-header.cor-vermelho { background: linear-gradient(135deg, #dc2626, #991b1b); }
+.resultado-header.cor-laranja  { background: linear-gradient(135deg, #ea580c, #c2410c); }
+.resultado-header.cor-amarelo  { background: linear-gradient(135deg, #ca8a04, #a16207); }
+.resultado-header.cor-verde    { background: linear-gradient(135deg, #16a34a, #15803d); }
+.resultado-header.cor-azul     { background: linear-gradient(135deg, #2563eb, #1d4ed8); }
+
+.resultado-badge-manchester span {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.3rem 1rem;
+  border-radius: 30px;
+  display: inline-block;
+}
+
+.resultado-badge-manchester h1 {
+  font-size: 2.8rem;
+  margin: 0.6rem 0 0.2rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.resultado-badge-manchester h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  opacity: 0.95;
+}
+
+.tempo-alvo {
+  font-size: 1rem;
+  font-weight: 800;
+  background: rgba(0, 0, 0, 0.35);
+  display: inline-block;
+  padding: 0.5rem 1.4rem;
+  border-radius: 30px;
+  margin-top: 1.2rem;
+}
+
+.resultado-corpo {
+  padding: 2.2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.resultado-secao h3 {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  margin: 0 0 0.5rem;
+}
+
+.resultado-secao p {
+  background: #090d16;
+  border: 1px solid #1e293b;
+  padding: 1.1rem 1.3rem;
+  border-radius: 10px;
+  line-height: 1.6;
+  margin: 0;
+  color: #e2e8f0;
+  font-size: 0.92rem;
+}
+
+.alerta-urgente-box {
+  background: rgba(220, 38, 38, 0.15);
+  border: 1.5px solid #dc2626;
+  color: #fca5a5;
+  padding: 1.2rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Impressão Limpa */
+@media print {
+  body * { visibility: hidden; }
+  .card-resultado-imprimir, .card-resultado-imprimir * { visibility: visible; }
+  .card-resultado-imprimir {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: white !important;
+    color: black !important;
+  }
+  .botoes-nao-imprimir, .totem-topbar { display: none !important; }
+}
+
+@media (max-width: 640px) {
+  .campo-linha { grid-template-columns: 1fr; }
+  .totem-topbar-steps { display: none; }
+  .totem-card-header, .totem-form { padding: 1.5rem; }
+}

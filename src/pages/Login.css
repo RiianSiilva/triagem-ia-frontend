@@ -1,0 +1,160 @@
+.login-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1e293b, #090d16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.login-card {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 440px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-logo-circulo {
+  background: #2563eb;
+  color: white;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin: 0 auto 1rem;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+}
+
+.login-header h1 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: white;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.login-header p {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin-top: 0.4rem;
+  line-height: 1.4;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.login-erro {
+  background: rgba(220, 38, 38, 0.15);
+  border: 1px solid #dc2626;
+  color: #fca5a5;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.login-campo label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  margin-bottom: 0.4rem;
+}
+
+.login-campo input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  background: #090d16;
+  border: 1.5px solid #1e293b;
+  color: white;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  transition: all 0.2s;
+}
+
+.login-campo input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+.btn-login {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.85rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+  margin-top: 0.5rem;
+}
+
+.btn-login:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.btn-login:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Atalhos da Feira */
+.atalhos-feira {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #1e293b;
+  text-align: center;
+}
+
+.atalhos-titulo {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.atalhos-botoes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+
+.btn-atalho {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+  border-radius: 8px;
+  padding: 0.5rem 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-atalho:hover {
+  background: #334155;
+  border-color: #64748b;
+  color: white;
+  transform: translateY(-1px);
+}

@@ -1,0 +1,97 @@
+.perfil-page {
+  min-height: 100vh;
+  background: #090d16;
+  color: white;
+}
+
+.perfil-nav {
+  background: #0f172a;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  border-bottom: 1px solid #1e293b;
+}
+
+.btn-voltar-perfil {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.perfil-card {
+  max-width: 460px;
+  margin: 3rem auto;
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 20px;
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.perfil-avatar-circulo {
+  width: 64px;
+  height: 64px;
+  background: #2563eb;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0 auto 1.2rem;
+}
+
+.perfil-card h3 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.perfil-sub {
+  color: #94a3b8;
+  font-size: 0.88rem;
+  margin-top: 0.3rem;
+}
+
+.perfil-dados-box {
+  background: #090d16;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 1.2rem;
+  margin: 1.8rem 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.perfil-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+}
+
+.perfil-item span {
+  color: #94a3b8;
+}
+
+.btn-ir-totem {
+  width: 100%;
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.85rem;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-ir-totem:hover {
+  background: #1d4ed8;
+}
